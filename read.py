@@ -2,6 +2,12 @@ import pandas as pd
 
 titanic = pd.read_csv("data/titanic.csv")
 
-print(titanic.head(15))
-print(titanic.tail(15))
-print(titanic.dtypes)
+# print(titanic.head(15))
+# print(titanic.tail(15))
+# print(titanic.dtypes)
+
+titanic.to_excel("data/titanic.xlsx", sheet_name="passengers", index=False)
+
+titanic = pd.read_excel("data/titanic.xlsx", sheet_name="passengers")
+
+print(titanic.info())
