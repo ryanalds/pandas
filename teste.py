@@ -1,5 +1,6 @@
 import pandas as pd
 
+# criando dataFrame (Tabela)
 df = pd.DataFrame(
     {
         "Name" : [
@@ -12,6 +13,7 @@ df = pd.DataFrame(
     }
 )
 
+# adicionando nova coluna com sua label "Active"
 df["Active"] =  True
 
 print(df)
