@@ -13,6 +13,10 @@ titanic = pd.read_csv("data/titanic.csv")
 #     }
 # ), 2)) #selecionando as estastisticas que seram printada de cada coluna
 
-titanic = titanic[["Age", "Sex"]].groupby("Sex").mean()
+# titanic = titanic[["Age", "Sex"]].groupby("Sex").mean()
 # filtrando as duas colunas e agrupando por sexo e calculando a media de cada grupo
-print(round(titanic, 2))
+
+# # titanic = titanic.groupby("Sex").mean(numeric_only=True) #agrupando por SEX e passando para mostrar todas as colunas
+# print(round(titanic, 2))
+
+print(titanic["Pclass"].value_counts()) # contando quantos passageiros tem para cada tipo de classe
